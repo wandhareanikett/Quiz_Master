@@ -2,11 +2,13 @@ package com.quizmaster.main;
 
 import java.util.Scanner;
 
+import com.adminModules.AdminModule;
 import com.util.Consolehelper;
-
 
 public class Admin_menu {
 	Scanner scanner;
+
+	AdminModule admin = new AdminModule();
 
 	public void showsdminnmenu() throws Exception {
 
@@ -33,26 +35,27 @@ public class Admin_menu {
 
 			switch (choice) {
 			case 1:
-				;
+				admin.addQuestion();
 				break;
 			case 2:
+				admin.editQuestion();
 				break;
 			case 3:
+				admin.deleteQuestion();
 				break;
 			case 4:
+				admin.viewAllScores();
 				break;
 			case 5:
+				admin.searchScoreById();
 				break;
 			case 6:
+				admin.viewTopScorer();
 				break;
 			case 7:
-				
-				exit = true;
-				break;
-
+				System.exit(0);
 			default:
-				System.out.println("Invalid Choice Try Again");
-				break;
+				System.out.println("Invalid choice.");
 			}
 
 		}

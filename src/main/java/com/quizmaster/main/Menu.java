@@ -19,6 +19,7 @@ public class Menu {
 			System.out.println("1.Student Menu");
 			System.out.println("2.Admin menu");
 			System.out.println("3.Exit");
+			System.out.print("Enter your choice : ");
 
 			String input = scanner.next();
 			int choice = -1;
